@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Bungee&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aoboshi One',serif; 
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root{
+    --bg-color:var(--bg-color);
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 4rem;
+    --p-font: 1rem;
+}
+
+body{
+    background-color: #363033;
+    color:var(--tex-color);
+}
+
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-text h1{
+    font-size: var(--h1-font);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home-text h5{
+    color: #ffffff99;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.home-text h3{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+
+.home-img img{
+    max-width: 100%;
+    width: 28rem;
+    height: auto;
+    margin-left: 25%;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 15px  70px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    border: solid 2px var(--tex-color);
+    transition: all.55 ease;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn i{
+    display: inline;
+    color: #fff;
+    font-size: 150%;
+    margin-right: 5px;
+}
+
+
+.btn:hover{
+    background: #66BB22;
+    border: 2px solid var(--tex-color);
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main li img{
+    width: 60px;
+    height: auto;
+    max-width: 100%;
+}
+
+.row{
+    background: #544C50;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all.55 ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row:hover{
+    transform: translateY(-8px);
+}
+
+.row2{
+    background: #544C50;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all.55 ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row2:hover{
+    transform: translateY(-8px);
+}
+
+.row3{
+    background: #544C50;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all.55 ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row3:hover{
+    transform: translateY(-8px);
+}

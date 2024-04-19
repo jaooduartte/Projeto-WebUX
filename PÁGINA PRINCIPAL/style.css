@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Bungee&display=swap');  /*fontes com link*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-size: 100%;
+}
+header {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #363033;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-container { /* CABEÇALHO */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    font-family: 'Bungee';
+    color: #FFF;
+    font-size: 30px;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: end;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-item { /* CONTROLES DO MENU E BARRA DE BUSCA */
+    color: #FFF !important;
+    font-family: 'Aoboshi One', serif;
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-item img { /* CONTROLES DOS ICONES DOS MENUS */
+    filter: invert(1) sepia(100%) saturate(20) hue-rotate(78deg); 
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-item .menu-text {
+    display: inline-block;
+    font-family: 'Aoboshi One';
+    vertical-align: middle;
+}
+
+.custom-toggler {
+    order: 3;
+}
+
+@media (max-width: 991px) {
+    .navbar-toggler.custom-toggler {
+        margin-left: auto;
+    }
+
+    .nav-item-modo-claro{
+        flex-basis: 50%;
+        margin-bottom: 5px;
+        max-width: 100%;
+    }
+
+    .search-container {
+        order: -1;
+    }
+
+    .navbar-nav.custom-navbar-collapse {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .menu {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        flex-basis: 50%;
+        margin-bottom: 5px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-nav.custom-navbar-collapse {
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .menu li {
+        margin-right: 20px;
+    }
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+    
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    width: 200px;
+}
+
+.search-container button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

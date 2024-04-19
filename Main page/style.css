@@ -1,0 +1,953 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Bungee&display=swap');   /*fonts*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root{
+  --text-color: white;    /*variável cor texto body*/
+  --bg-color: #363033;    /*background*/
+  --title-color: white;     /*text logo*/
+  --bg-promocolor:#363033;   /*back promo color*/
+  --text-produtocolor: white;
+  --text-shadow: 0 0 10px #0000;
+  --switch-bg-url: url(<ion-icon name="moon"></ion-icon>);
+  --menu-bg: #544C50;
+  --textmenu-color: white;
+
+   --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 4rem;
+    --p-font: 1rem;  
+
+
+}
+.light{
+  --text-color: #363033;
+  --bg-color: white;
+  --title-color: #39A062;
+  --bg-promocolor:#53DF8B;
+  --text-produtocolor: black;
+  --text-shadow: none;
+  --switch-bg-url: url(<ion-icon name="sunny"></ion-icon>);
+  --menu-bg: #D9D9D9;
+  --textmenu-color: #544C50;
+}
+body{
+  background: var(--bg-color);
+  font-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  flex-direction: column;
+  transition: background-color 0.3s ease;  /*transiçãao de back com delay*/
+ /* opacity: 0;*/
+ z-index: 1;
+
+  transition: opacity 0.05s ease-in-out;
+}
+body.fade-in {
+  opacity: 1;
+}
+body.fade-out {
+  opacity: 0;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  flex-wrap:wrap;
+  position: fixed;
+  top: 0;
+  background: var(--bg-color);
+  z-index: 2;
+  
+}
+@media (max-width: 767px) {   /* QUANDO EM TELAS MENORES */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    align-self: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px !important;
+  }
+  .header-search {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .header-search input {
+    width: 100%;
+  }
+  .menu-produtos {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.logo{
+  font-family: 'Bungee';
+  color: var(--title-color);
+  font-size: 40px;
+  height: 86px;
+  align-self: end;
+}
+.text-logo a{
+  text-shadow: var(--text-shadow); 
+color: var(--title-color);   /*sombra na logo*/
+}
+.search-bar {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-menu{
+  display: flex;
+  font-family: 'Aoboshi One', serif;
+  font-size: 15px;
+  color: var(--text-color);
+  gap: 50px;
+  align-self: flex-start;
+  padding: 24px;
+  width: 100%;
+  justify-content: center;
+  gap: 91px;
+    POSITION: RELATIVE;
+    LEFT: -20PX;
+}
+.header-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  gap: 5px;
+  height: 100%;
+}
+.header-menu a ion-icon {
+  margin-bottom: 5px;
+  color: #39A062;
+  font-size: 19px;
+}
+#dark-mode-toggle{
+  cursor: pointer;
+}
+#dark-mode-toggle ion-icon[name="sunny"] {
+  color: #39A062; /* Cor personalizada */
+  font-size: 24px; /* Tamanho personalizado */
+  position: relative;
+    bottom: -2px;
+}
+.header-item:first-child ion-icon[name="person"]{
+  position: relative;
+  bottom: -1px;
+}
+.header-item:nth-child(2) ion-icon[name="heart"]{
+  position: relative;
+  top: 3px;
+}
+.header-item:nth-child(3) ion-icon[name="moon"]{
+  position: relative;
+  bottom: -2px;
+}
+.header-item{
+  text-align: justify;
+}
+.header-search{
+  width: 100%;
+}
+.header-search form{
+  display: flex;               /*add styles in the box header search*/
+
+}
+.header-search input{
+  width: 100%;
+  border-radius: 19px;
+  background: #D9D9D9;        /*estiliza a barra parte de dentro da barra de search*/
+  height: 34px;
+}
+#search-input{                /*id atribuido á entrada de texto que add*/
+  font-family: 'Aoboshi One', serif;
+  font-size: 12px;
+  width: 100%;
+  border: none;
+}
+.search-button{
+  position: relative;
+    right: 45px;
+    background: transparent;
+    border: none;
+}
+.search-button ion-icon{
+  font-size: 22px;
+  background: transparent;
+  position: relative;
+    right: -11px;
+}
+.menu-produtos{
+  display: flex;
+  font-family: 'Aoboshi One', serif;
+  background:var(--menu-bg);
+  color: var(--textmenu-color);
+  justify-content: space-around;
+  flex-basis: 100%;
+  height: 35px;
+  margin: 16px 0 0;
+  transition: transform 0.3s;
+  
+}
+.menu-produtos :hover{
+  color: #53DF8B;
+ 
+  border-radius: 8px;
+  
+}
+.menu-item{
+  
+  font-size: 16px;
+  display: flex;
+  color: var(--textmenu-color);
+  align-items: center;
+}
+.menu-item-link {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-item-link:hover {
+  opacity: 0.7;
+}
+
+.menu-item-link:active {
+  opacity: 0.5;
+}
+
+a{
+  text-decoration: none;
+  color: var(--textmenu-color);
+ 
+}
+.header-cart {
+  font-family: 'Aoboshi One', serif;
+  font-size: 20px;
+  background-color:#66BB22;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 213px;
+  height: 57px;
+  justify-content: center;
+}
+.header-cart ion-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  position: relative;
+    left: -11px;
+}
+.container-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 157px;
+}
+ 
+.img-main{
+  border: solid 3px #53DF8B;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  transition: .35s;
+  cursor: pointer;
+}
+.img-main img{
+  width: 100%;
+}
+.text-alertpromo{
+  background: var(--bg-promocolor);
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Aoboshi One', serif;
+  color: white;
+  border: solid 3px #53DF8B;
+  border-left: none;
+  border-right: none;
+  height: 37px;
+  margin-top: -6px;
+}
+h1{
+  font-size: 21px;
+  color: white;
+}
+.text-alertpromo ion-icon{
+  font-size: 31px;
+}
+.produtos-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--text-produtocolor);
+  
+}
+.produto-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  font-family: 'Aoboshi One', serif;
+  backface-visibility: hidden;
+  transition: opacity 0.3s;
+  transition: .35s;
+  cursor: pointer;
+}
+
+.produto-item:hover {
+  opacity: 1.8; /* Ajuste o valor de opacidade conforme desejado */
+  transform: scale(1.09); /* Ajuste o valor de escala conforme desejado */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona transições suaves */
+}
+.produto-item:not(:hover) {
+  opacity: 1; /* Define a opacidade dos itens de produto quando não estiverem com o mouse em cima */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona uma transição suave para a opacidade */
+}
+.text-container-produto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  bottom: -46px;
+}
+
+.title-produtomain{
+  align-items: center;
+  margin-top: -15px;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+.valor-antes {
+  color: #FF9900; /* Define a cor para o valor "antes" */
+  text-decoration: line-through;    /*passa uma linha no meio da palavra*/
+}
+.valor-depois{
+  color: #66BB22;
+}
+.rodape_final{
+
+  background-color: var(--text-color);         
+
+  padding: 5px;
+
+  Margin: 5px;
+
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+
+.rodape_final {
+
+background-color: var(--bg-color);
+background-color: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+color:#66BB22;
+
+display: flex;
+
+justify-content: space-around;
+
+margin: auto;
+
+
+bottom: 0;
+width: 100%;
+
+
+
+font-family: 'Aoboshi One', serif;
+}
+
+
+
+.logo a { 
+  font-family: 'Bungee';
+  color: var(--title-color);
+  font-size: 40px;
+  height: 86px;
+  align-self: end;
+}
+.text-logo{
+  text-shadow: var(--text-shadow);       /*sombra na logo*/
+}
+.search-bar {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-menu{
+  display: flex;
+  font-family: 'Aoboshi One', serif;
+  font-size: 15px;
+  color: var(--text-color);
+  gap: 50px;
+  align-self: flex-start;
+  padding: 24px;
+  width: 100%;
+  justify-content: center;
+  gap: 91px;
+    POSITION: RELATIVE;
+    LEFT: -20PX;
+}
+.header-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  gap: 5px;
+  height: 100%;
+}
+
+.header-menu a ion-icon {
+  margin-bottom: 5px;
+  color: #39A062;
+  font-size: 19px;
+}
+#dark-mode-toggle{
+  cursor: pointer;
+}
+#dark-mode-toggle ion-icon[name="sunny"] {
+  color: #39A062; /* Cor personalizada */
+  font-size: 24px; /* Tamanho personalizado */
+  position: relative;
+    bottom: -2px;
+}
+.header-item:first-child ion-icon[name="person"]{
+  position: relative;
+  bottom: -1px;
+}
+.header-item:nth-child(2) ion-icon[name="heart"]{
+  position: relative;
+  top: 3px;
+}
+.header-item:nth-child(3) ion-icon[name="moon"]{
+  position: relative;
+  bottom: -2px;
+}
+.header-item{
+  text-align: justify;
+}
+.header-search{
+  width: 100%;
+}
+.header-search form{
+  display: flex;               /*add styles in the box header search*/
+
+}
+.header-search input{
+  width: 100%;
+  border-radius: 19px;
+  background: #D9D9D9;        /*estiliza a barra parte de dentro da barra de search*/
+  height: 34px;
+}
+#search-input{                /*id atribuido á entrada de texto que add*/
+  font-family: 'Aoboshi One', serif;
+  font-size: 12px;
+  width: 100%;
+  border: none;
+}
+.search-button{
+  position: relative;
+    right: 45px;
+    background: transparent;
+    border: none;
+}
+.search-button ion-icon{
+  font-size: 22px;
+  background: transparent;
+  position: relative;
+    right: -11px;
+}
+.menu-produtos{
+  display: flex;
+  font-family: 'Aoboshi One', serif;
+  background:var(--menu-bg);
+  color: var(--textmenu-color);
+  justify-content: space-around;
+  flex-basis: 100%;
+  height: 35px;
+  margin: 16px 0 0;
+  
+}
+.menu-item{
+  font-size: 16px;
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.menu-produtos :hover{
+  color: #53DF8B;
+  border-radius: 8px;
+}
+ a{
+    text-decoration: none;
+    color: var(--textmenu-color);
+}
+
+
+
+.header-cart {
+  font-family: 'Aoboshi One', serif;
+  font-size: 20px;
+  background-color:#66BB22;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 213px;
+  height: 57px;
+  justify-content: center;
+}
+.header-cart ion-icon {
+  font-size: 24px;
+  margin-right: 5px;
+  position: relative;
+    left: -11px;
+}
+.container-mouse-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 157px;
+}
+.mouse-title{
+  display: flex;
+  margin: 36px;
+  color:  var(--text-color);
+}
+h2{
+  font-family: 'Aoboshi One', serif;
+  border: solid 3px #53DF8B;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+.mouses-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--text-produtocolor);
+}
+.mouse-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Aoboshi One', serif;
+}
+.title-produtomain{
+  position: relative;
+    bottom: -15px;
+}
+.text-produtomain{
+  position: relative;
+    bottom: -18px;
+}
+.mouse-item:hover {
+  opacity: 1.8; /* Ajuste o valor de opacidade conforme desejado */
+  transform: scale(1.09); /* Ajuste o valor de escala conforme desejado */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona transições suaves */
+}
+.mouse-item:not(:hover) {
+  opacity: 1; /* Define a opacidade dos itens de produto quando não estiverem com o mouse em cima */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona uma transição suave para a opacidade */
+}
+.mouse-item img {
+  width: 400px; /* Defina o valor desejado para a largura */
+  height: 355px;
+  border-radius: 61px; /* Isso garantirá que a altura seja ajustada proporcionalmente */
+}
+.img-mouse{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.img-mouse[src="/Mouse/assets-mouse/gpro.png"]{
+  width: 492px;
+}
+.img-mouse[src="/Mouse/assets-mouse/fallen.png"]{
+  width: 343px;
+  height: 323px;
+}
+.valor-antes {
+  color: #FF9900; /* Define a cor para o valor "antes" */
+  text-decoration: line-through;    /*passa uma linha no meio da palavra*/
+}
+.valor-depois{
+  color: #66BB22;
+}
+.container-teclado-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 157px;
+}
+.teclado-title{
+  display: flex;
+  margin: 36px;
+  color:  var(--text-color);
+}
+.teclados-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--text-produtocolor);
+}
+.teclado-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Aoboshi One', serif;
+}
+.teclado-item:hover {
+  opacity: 1.8; /* Ajuste o valor de opacidade conforme desejado */
+  transform: scale(1.09); /* Ajuste o valor de escala conforme desejado */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona transições suaves */
+}
+.teclado-item:not(:hover) {
+  opacity: 1; /* Define a opacidade dos itens de produto quando não estiverem com o mouse em cima */
+  transition: opacity 0.3s, transform 0.3s; /* Adiciona uma transição suave para a opacidade */
+}
+.teclado-item img {
+  width: 400px; /* Defina o valor desejado para a largura */
+  height: 355px;
+  border-radius: 61px; /* Isso garantirá que a altura seja ajustada proporcionalmente */
+}
+.img-teclado{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.img-teclado[src="/Teclado/assets-teclado/TECLADO.png"]{
+  position: relative;
+  bottom: -24px;
+}
+.valor-antes {
+  color: #FF9900; /* Define a cor para o valor "antes" */
+  text-decoration: line-through;    /*passa uma linha no meio da palavra*/
+}
+.valor-depois{
+  color: #66BB22;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-text h1{
+  font-family: 'Aoboshi One', serif;
+  font-size: var(--h1-font);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.home-text h5{
+  font-family: 'Aoboshi One', serif;
+  color: #ffffff99;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.home-text h3{
+  font-family: 'Aoboshi One', serif;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+
+.home-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.home-img img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: 28rem;
+  height: auto;
+  margin-left: 25%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.btn{
+  display: inline-block;
+  padding: 15px  70px;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+  border: solid 2px var(--tex-color);
+  transition: all.55 ease;
+  color: #fff;
+  border-radius: 15px;
+  font-family: 'Aoboshi One', serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn i{
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 150%;
+  margin-right: 5px;
+  font-family: 'Aoboshi One', serif;
+}
+
+
+.btn:hover{
+  background: #66BB22;
+  border: 2px solid var(--tex-color);
+}
+
+.main{
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main li img{
+  width: 60px;
+  height: auto;
+  max-width: 100%;
+}
+
+.row{
+  background: #544C50;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all.55 ease;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.row:hover{
+  transform: translateY(-8px);
+}
+
+.row2{
+  background: #544C50;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all.55 ease;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.row2:hover{
+  transform: translateY(-8px);
+}
+
+.row3{
+  background: #544C50;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: all.55 ease;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.row3:hover{
+  transform: translateY(-8px);
+}
+
+.container-login {
+  color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #544C50;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-formulario {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group-login {
+  margin-bottom: 20px;
+}
+
+.form-group-login label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.form-group-login input[type="text"],
+.form-group-login input[type="email"],
+.form-group-login input[type="password"] {
+  
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group-login input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group-login input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container-carrinho {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #544C50;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .carrinho {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: 'Aoboshi One', serif;
+    }
+    
+    .product-image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .product-image img {
+      max-width: 300px;
+      height: auto;
+    }
+    
+    .product-details {
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: 'Aoboshi One', serif;
+    }
+    
+    .product-details h3 {
+      margin-bottom: 10px;
+    }
+    
+    .product-details p {
+      margin-bottom: 5px;
+    }
+    
+    .product-price {
+      text-align: right;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #fff;
+      font-family: 'Aoboshi One', serif;
+    }
+    
+    .checkout-button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Aoboshi One', serif;
+    }
+    
+    .checkout-button:hover {
+      
+      background-color: #45a049;
+    }

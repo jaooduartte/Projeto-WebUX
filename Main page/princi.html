@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Pagina de Produto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <span class="text-logo">
+            <a class="page-link" href="/Main page/index.html">TouchTech</a>
+          </span>
+        </div>
+        <div class="search-bar">
+          <nav class="header-menu">
+            <a class="header-item" href="login.html"
+              ><ion-icon name="person"></ion-icon> MINHA CONTA <br
+            /></a>
+            <a class="header-item" href="#"
+              ><ion-icon name="heart"></ion-icon> MEUS FAVORITOS</a
+            >
+            <a id="dark-mode-toggle" class="header-item" href="#"
+              ><ion-icon name="moon"></ion-icon>
+              <span id="modo-texto">MODO ESCURO</span></a
+            >
+          </nav>
+          <nav class="header-search">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  id="search-input"
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  value="   Digite o que você procura..."
+                />
+                <!--barra de pesquisa-->
+                <button class="search-button" type="submit">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="header-cart"><ion-icon name="cart"></ion-icon>CARRINHO</div>
+  
+        <nav class="menu-produtos">
+          <div class="menu-item">
+            <a class="page-link" href="/Mouse/mouse.html">MOUSES</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="/Teclado/teclado.html">TECLADOS</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">HEADSETS</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">MONITORES</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">MOUSEPADS</a>
+            
+          </div>
+        </nav>
+      </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="img/product1.png" class="one">
+        </div><!--home-img-->
+
+        <div class="home-text">
+
+            <h1>g pro x superligth</h1>
+            <h5>Mouse sem fio silencioso, confortável e fácil de usar</h5>
+            <h3>$899.00</h3>
+            <a href="#" class="btn"><i class='bx bx-cart-add' style='color:#ffffff'  ></i>Compre Agora</a>
+            
+        </div><!--home-text-->
+    </section><!--home-->
+
+    <div class="main">
+        <div class="row">
+            <li><img src="img/main1.png" onclick="slider('img/product1.png')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="img/main2.png" onclick="slider('img/product2.png')"></li>
+        </div><!--row-->
+
+        <div class="row3">
+            <li><img src="img/main3.png" onclick="slider('img/product3.png')"></li>
+        </div><!--row-->
+    </div><!--main-->
+
+</body>
+</html>

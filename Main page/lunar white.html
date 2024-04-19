@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Pagina de Produto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <span class="text-logo">
+            <a class="page-link" href="main page.html">TouchTech</a>
+          </span>
+        </div>
+        <div class="search-bar">
+          <nav class="header-menu">
+            <a class="header-item" href="login.html"
+              ><ion-icon name="person"></ion-icon> MINHA CONTA <br
+            /></a>
+            <a class="header-item" href="#"
+              ><ion-icon name="heart"></ion-icon> MEUS FAVORITOS</a
+            >
+            <a id="dark-mode-toggle" class="header-item" href="#"
+              ><ion-icon name="moon"></ion-icon>
+              <span id="modo-texto">MODO ESCURO</span></a
+            >
+          </nav>
+          <nav class="header-search">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  id="search-input"
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  value="   Digite o que você procura..."
+                />
+                <!--barra de pesquisa-->
+                <button class="search-button" type="submit">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="header-cart"><ion-icon name="cart"></ion-icon>CARRINHO</div>
+  
+        <nav class="menu-produtos">
+          <div class="menu-item">
+            <a class="page-link" href="mouse.html">MOUSES</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="teclado.html">TECLADOS</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">HEADSETS</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">MONITORES</a>
+            
+          </div>
+          <div class="menu-item">
+            <a class="page-link" href="#">MOUSEPADS</a>
+            
+          </div>
+        </nav>
+      </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    <section class="home">
+        <div class="home-img">
+            <img src="img/product7.png" class="one">
+        </div><!--home-img-->
+
+        <div class="home-text">
+          
+            <h1>Redragon King Cobra <br> Lunar White</h1>
+            <h5>Nova versão com sistema de Iluminação Chroma RGB!</h5>
+            <h3>R$120.00</h3>
+            <a href="carrinho mouse.html" class="btn"><i class='bx bx-cart-add' style='color:#ffffff'  ></i>Compre Agora</a>
+            
+        </div><!--home-text-->
+    </section><!--home-->
+
+    <div class="main">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+        <div class="row">
+            <li><img src="img/Lunar1.png" onclick="slider('img/product7.png')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="img/Lunar2.png" onclick="slider('img/product8.png')"></li>
+        </div><!--row-->
+
+        <div class="row3">
+            <li><img src="img/Lunar3.png" onclick="slider('img/product9.png')"></li>
+        </div><!--row-->
+    </div><!--main-->
+
+    <footer class="rodape_final">
+      <article>
+      <p>
+      
+      <h4 class="fonte-elemento"> INSTITUCIONAL </h4>
+      
+      <h4> _ </h4>
+      
+      <h5 class="cor_fonte" > Quem somos </h5>
+      </p> </article>
+      
+      <article>
+      
+      <p>
+      
+      <h4 class="fonte-elemento"> DÚVIDAS </h4>
+      
+      <h4> _ </h4>
+      
+      <h5 class="cor_fonte">Entrega </h5>
+      
+      <h5 class="cor_fonte">Garantia </h5>
+      
+      <h5 class="cor_fonte">Formas de pagamento </h5> </p> </article>
+      
+      <article>
+      
+      <p>
+      
+      <h4 class="fonte-elemento"> ATENDIMENTO </h4>
+      
+      <h4> _ </h4>
+      
+      <h5 class="cor_fonte">SAC </h5>
+      
+      <h5 class="cor_fonte">Fale conosco </h5></p> </article>
+      
+      <article>
+      
+      <p>
+      
+      <h4 class="fonte-elemento"> NEWSLETTER </h4>
+      
+      <h4> _ </h4>
+      
+      <h5 class="cor_fonte">Receba ofertas exclusivas no seu e-mail </h5></p>
+      
+      <input class="email-input" type="email" id="email" name="email" placeholder="Digite seu e-mail">
+      
+      </article>
+      
+      
+      
+      </footer>
+</body>
+</html>
